@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from TenderApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/test/', views.my_api_test, name='my_api_test'),
+    path('api/getExeTeamMembers/', views.getExeTeamMembers, name='getExeTeamMembers'),
 ]
